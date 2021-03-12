@@ -12,6 +12,7 @@
     <script
             src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" th:href="@{/custom.css}"/>
+    <script th:src="@{/scripts.js}"></script>
 </head>
 <body>
     <div class="container">
@@ -43,10 +44,27 @@
                                     </tr>
                                 </table>
                             </td>
-                            <td> TODO: Acciones </td>
+                            <td>
+                                <div style="margin: 0.25em; display: inline;">
+                                        ... Acciones ...
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="add-playlist" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header centered teal">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 style="color: white;" class="modal-title">Create Playlist</h4>
+                </div>
+                <div class="modal-body">
+                </div>
             </div>
         </div>
     </div>
