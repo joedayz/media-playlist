@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Media Application</title>
+    <link rel="shortcut icon" th:href="@{/favicon.png}" type="image/x-icon">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" th:href="@{/custom.css}"/>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="centered">
+                <table id="playlist" class="table table-striped table-bordered table-responsive">
+                    <thead class="teal" style="color: white; font-size: 1.5em;">
+                        <tr>
+                            <td>Name</td>
+                            <td>Songs</td>
+                            <td style="width: 15%"></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="playlist: ${playlists}">
+                            <td class="playlist_id" style="display: none"
+                                th:text="${playlist.id}" />
+                            <td th:text="${playlist.name}" />
+                            <td>
+                                <table class="table table-striped table-bordered table-responsive">
+                                    <tr class="table" th:each="song: ${playlist.songs}">
+                                        <td class="song_id" style="display: none" th:text="${song.id}" />
+                                        <td th:text="${song.name}" />
+                                        <td><img class="cover-url" th:src="${song.coverUrl}" />
+                                        <td><span title="Remove Song"
+                                                  th:classappend="${'playlist-' + playlist.id + ' song-' + song.id}"
+                                                  class="fa fa-trash fa-3x remove-song" aria-hidden="true">
+										</span></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td> TODO: Acciones </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>

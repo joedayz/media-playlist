@@ -1,0 +1,48 @@
+.centered {
+	text-align: center;
+}
+
+td {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.fa-3x {
+	vertical-align: middle;
+}
+
+.row {
+	margin: 2em
+}
+
+thead {
+	font-weight: bolder;
+	text-align: center
+}
+
+.table>tbody>tr>td {
+	vertical-align: middle;
+}
+
+.teal {
+	background-color: teal;
+	color: white;
+	font-weight: bolder;
+}
+
+.fa {
+	cursor: pointer;
+}
+
+span.fa-trash:hover {
+	color: red;
+}
+
+span.fa-plus:hover {
+	color: green;
+}
+
+.cover-url {
+	max-width: 200px;
+	max-height: 100px;
+}
