@@ -26,6 +26,15 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
+
+	implementation 'com.google.guava:guava:29.0-jre'
+
+	implementation 'io.springfox:springfox-spring-webmvc:2.10.5'
+	implementation 'io.springfox:springfox-swagger2:2.10.5'
+	implementation 'io.springfox:springfox-swagger-ui:2.10.5'
+
+
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
